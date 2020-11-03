@@ -1,0 +1,21 @@
+def SmallestSubstring(str): 
+    n = len(str)   
+    max = len(set(str)) 
+    minlen = n  
+
+    for i in range(n): 
+        for j in range(n): 
+            subs = str[i:j] 
+            substr_len = len(subs) 
+            subDistinctChar = len(set(subs)) 
+              
+            if (substr_len < minl and 
+                max == subDistinctChar): 
+                minlen = substr_len 
+  
+    return minlen 
+
+if __name__ == "__main__":  
+    str = input()  
+    a = smallesteSubstr_maxDistictChar(str)
+    print(a)
